@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Define the styles for the top navigation menu */
+        .topnav {
+            background-color: #333; /* Background color of the menu */
+            overflow: hidden;
+        }
+
+        /* Style for the individual menu items */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #fff; /* Text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the color of the menu items on hover */
+        .topnav a:hover {
+            background-color: #555;
+        }
+        .om-mig {
+    padding: 20px;
+    background-color: rgb(13, 81, 134);
+    border: 5px solid rgb(80, 171, 251);
+    color: rgb(255, 255, 255);
+}
+        .title_setup {
+            color: rgb(50, 50, 50);
+            font-size: 100px ;
+            background-color: rgb(201, 143, 57);
+            border:15px solid rgb(138, 106, 46);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .text_setup {
+font-size:50px ;
+        }
+        .column-container {
+            column-count: 2; /* Set the number of columns */
+            column-fill: balance;
+            column-gap: 0px;
+         
+        }
+        .column-container p {
+            font-size: 50px ;
+            break-inside: avoid-column;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 60vh;
+            margin-left:300px ;
+            margin-right: 300px;
+            background-color:rgb(203, 150, 81);
+            
+
+        }
+        .column-container h1 {
+            break-inside: avoid-column;
+            font-size:65px ;
+            margin: 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-left:300px ;
+            margin-right: 300px;
+            background-color:rgb(203, 150, 81)
+
+        }
+        .column-container div {
+            border:15px solid rgb(138, 106, 46);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1 class="title_setup">Arthur</h1>
+        <div class="column-container">
+            <div>
+                <h1>Om mig</h1>
+                <p>fylde</p>
+            </div>
+            <div>
+                <h1>Yndlings sportshold</h1>
+                <p>fylde</p>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
