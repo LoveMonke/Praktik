@@ -1,103 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
     <style>
-        /* Define the styles for the top navigation menu */
-        .topnav {
-            background-color: #333; /* Background color of the menu */
-            overflow: hidden;
-        }
-
-        /* Style for the individual menu items */
-        .topnav a {
-            float: left;
-            display: block;
-            color: #fff; /* Text color */
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* Change the color of the menu items on hover */
-        .topnav a:hover {
-            background-color: #555;
-        }
-        .om-mig {
-    padding: 20px;
-    background-color: rgb(13, 81, 134);
-    border: 5px solid rgb(80, 171, 251);
-    color: rgb(255, 255, 255);
-}
-        .title_setup {
-            color: rgb(50, 50, 50);
-            font-size: 100px ;
-            background-color: rgb(242, 31, 16);
-            border:15px solid rgb(138, 106, 46);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .text_setup {
-font-size:50px ;
-        }
-        .column-container {
-            column-count: 2; /* Set the number of columns */
-            column-fill: balance;
-            column-gap: 0px;
-         
-        }
-        .column-container p {
-            font-size: 50px ;
-            break-inside: avoid-column;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            height: 60vh;
-            margin-left:300px ;
-            margin-right: 300px;
-            background-color:rgb(203, 150, 81);
-            
-
-        }
-        .column-container h1 {
-            break-inside: avoid-column;
-            font-size:65px ;
-            margin: 0;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            margin-left:300px ;
-            margin-right: 300px;
-            background-color:rgb(203, 150, 81)
-
-        }
-        .column-container div {
-            border:15px solid rgb(138, 106, 46);
-        }
+        /* CSS styles as before */
+        /* ... */
     </style>
 </head>
 <body>
-    <!-- Top Navigation Menu -->
-    <div class="topnav">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+    <header style="background-color: #007BFF; color: #fff; text-align: center; padding: 1em 0;">
+        <h1>Min website</h1>
+        <nav>
+            <a href="#about" style="text-decoration: none; color: #fff; margin: 0 20px;">About Me</a>
+            <a href="#experience" style="text-decoration: none; color: #fff; margin: 0 20px;">Experience</a>
+            <a href="#skills" style="text-decoration: none; color: #fff; margin: 0 20px;">Skills</a>
+            <a href="#portfolio" style="text-decoration: none; color: #fff; margin: 0 20px;">Portfolio</a>
+        </nav>
+    </header>
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); position: relative; margin-top: -60px;">
+        <section id="about">
+            <h2>Om mig</h2>
+            <p>
+                Hej, jeg hedder Arthur, og jeg elsker de simple glæder i livet. Mad og søvn er mine to største passioner. Der er næsten intet, der kan måle sig med fornøjelsen ved at smage lækre retter og derefter lægge mig i min komfortable seng for en god nats søvn. Min hverdag kredser omkring disse to glæder
+            </p>
+        </section>
+        <section id="experience">
+            <h2>Ting jeg laver udover at spise og sove</h2>
+            <p>
+                Udover at sove elsker jeg også at spille computerspil, jeg træner også med 2 af mine venner. Jeg elsker også at spille brætspil med min familie.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>Mine Skills</h2>
+            <ul id="skillsList">
+                <li onclick="toggleSkill('WebDevelopment')">Spise</li>
+                <li onclick="toggleSkill('GraphicDesign')">Sove</li>
+                <!-- Add more skills -->
+            </ul>
+            <div id="WebDevelopmentDetails" style="display: none;">
+                <p>Jeg er god til at indtage en stor mængde mad på under 10 min</p>
+            </div>
+            <div id="GraphicDesignDetails" style="display: none;">
+                <p>Jeg er virkelig god til at sove, og kan nemt sove i 11-12 timer hver dag.</p>
+            </div>
+          
+        </section>
+        <section id="portfolio">
+            <h2>SQL</h2>
+            <p>
+                Check out some of my work in the portfolio section. I've had the privilege to work on exciting projects such as [Project 1] and [Project 2]. Feel free to reach out to me if you'd like to collaborate.
+            </p>
+            <img style="width: 100%;" src="https://github.com/LoveMonke/Praktik/assets/93515483/d1f84433-9af2-47d0-ae18-d8e56cf805fb" alt="" srcset="">
+            <img style="width: 100%;" src="https://github.com/LoveMonke/Praktik/assets/93515483/8e2c73fd-8a19-4563-a9e5-4e1d7d096893" alt="" srcset="">
+        </section>
     </div>
 
-    <!-- Main content -->
-    <div class="content">
-        <h1 class="title_setup">Arthur</h1>
-        <div class="column-container">
-            <div>
-                <h1>Om mig</h1>
-                <p>fylde</p>
-            </div>
-            <div>
-                <h1>Yndlings sportshold</h1>
-                <p>fylde</p>
-            </div>
-        </div>  
-    </div>
+    <script>
+        // Calculate years of experience
+        const currentYear = new Date().getFullYear();
+        const experienceElement = document.getElementById('yearsExperience');
+        const startYear = 2010; // Set your start year here
+        experienceElement.textContent = currentYear - startYear;
+
+        // Toggle skill details
+        function toggleSkill(skill) {
+            const skillDetails = document.getElementById(skill + 'Details');
+            if (skillDetails.style.display === 'none') {
+                skillDetails.style.display = 'block';
+            } else {
+                skillDetails.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
